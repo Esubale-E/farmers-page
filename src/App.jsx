@@ -1,14 +1,32 @@
+import NavBar from "./components/NavBar";
+import FAQSection from "./components/FAQSection";
+import Hero from "./components/Hero";
+import WhatWeOffer from "./components/WhatWeOffer";
+import HowItWorks from "./components/HowItWorks";
+import BenefitsForFarmers from "./components/BenefitFormFarmer";
+import NewsSubscription from "./components/NewsSubscrioption";
+import Footer from "./components/Footer";
 import "./App.css";
+import { FaArrowUp } from "react-icons/fa";
 
 function App() {
   return (
-    <>
-      <h1 className="text-blue-700 font-bold">Vite + React</h1>
-
-      <div className="bg-blue-500 text-white p-4 rounded">
-        Hello, TailwindCSS with Vite!
-      </div>
-    </>
+    <div className="relative">
+      <NavBar />
+      <Hero />
+      <WhatWeOffer />
+      <HowItWorks />
+      <BenefitsForFarmers />
+      <FAQSection />
+      <NewsSubscription />
+      <Footer />
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-8 right-8 bg-[#009933] text-white p-3 rounded-full shadow-lg hover:bg-green-900 transition duration-300"
+      >
+        Back to Top <FaArrowUp className="inline" />
+      </button>
+    </div>
   );
 }
 
