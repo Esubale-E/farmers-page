@@ -6,7 +6,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-300 py-3">
+    <nav className="sticky top-0 z-50 bg-slate-100 border-b border-gray-300 py-3">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -40,7 +40,7 @@ const Navbar = () => {
                 <FaChevronDown className="ml-2 text-gray-600 w-3 h-3 group-hover:hidden" />
                 <FaChevronUp className="ml-2 text-gray-600 w-3 h-3 hidden group-hover:block" />
               </a>
-              <ul className="absolute left-0 mt-2 bg-gray-100 shadow-lg hidden group-hover:block">
+              <ul className="absolute left-0 top-6 bg-gray-100 shadow-lg hidden group-hover:block group">
                 <li className="p-2 hover:bg-green-600 transition">
                   <a
                     href="/FarmersPage"
@@ -67,6 +67,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
+
             <li>
               <a href="/blog" className="hover:text-green-600">
                 Blog
@@ -74,7 +75,6 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Desktop Call-to-Action */}
           <div className="hidden lg:flex">
             <a href="/WaitingListForm">
               <button
@@ -86,7 +86,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <div className="lg:hidden">
             {menuOpen ? (
               <FaTimes
@@ -102,7 +101,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {menuOpen && (
           <ul className="flex flex-col items-center mt-4 bg-gray-100 p-4 space-y-4">
             <li>
