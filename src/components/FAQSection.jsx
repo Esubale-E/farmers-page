@@ -11,11 +11,11 @@ const FAQSection = () => {
   const QandAs = questionsAndAnswers.slice(0, visiblseQandAs);
 
   return (
-    <section className="w-full text-white  bg-[#003311] m-auto py-10 px-10 md:px-60">
-      <h1 className="font-bold text-[2rem] md:text-[2.8rem] text-center text-neutral20">
+    <section className="w-full text-white bg-green-900 mx-auto py-10 px-10 md:px-60">
+      <h1 className="font-bold text-2xl md:text-3xl text-center text-gray-300">
         We know you have questions.
       </h1>
-      <p className="mt-3 text-center mb-12 text-neutral20">
+      <p className="mt-3 text-center mb-12 text-gray-300">
         So we have answered some of them.
       </p>
 
@@ -23,12 +23,12 @@ const FAQSection = () => {
         {QandAs.map((QandA, i) => (
           <div
             key={i}
-            className="text-[#003311] bg-white rounded-md py-2 px-3 mb-7 font-semibold"
+            className="text-green-900 bg-white rounded-md py-2 px-3 mb-7 font-semibold cursor-pointer"
             onClick={() => setExpandedIndex(expandedIndex === i ? null : i)}
           >
             <div className="flex justify-between items-center">
               <p>{QandA.question}</p>
-              <p className="cursor-pointer text-[2.3rem] font-bold">
+              <p className="cursor-pointer text-4xl font-bold">
                 {expandedIndex === i ? "-" : "+"}
               </p>
             </div>
@@ -37,10 +37,10 @@ const FAQSection = () => {
         ))}
         <div className="flex justify-end font-bold">
           <button
-            className="text-[#003311] rounded-md bg-white p-3"
+            className="text-green-900 rounded-md bg-white py-2 px-4"
             onClick={toggleVisibleContent}
           >
-            {visiblseQandAs === 5 ? " View More FAQs" : " View Less FAQs"}
+            {visiblseQandAs === 5 ? "View More FAQs" : "View Less FAQs"}
           </button>
         </div>
       </div>
