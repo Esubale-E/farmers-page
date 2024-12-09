@@ -7,7 +7,6 @@ import HowItWorks from "./components/HowItWorks";
 import BenefitsForFarmers from "./components/BenefitFormFarmer";
 import NewsSubscription from "./components/NewsSubscrioption";
 import Footer from "./components/Footer";
-import "./App.css";
 import { FaArrowUp } from "react-icons/fa";
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative font-sans">
       <NavBar />
       <Hero />
       <WhatWeOffer />

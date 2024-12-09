@@ -79,7 +79,7 @@ const Navbar = () => {
             <a href="/WaitingListForm">
               <button
                 type="button"
-                className="bg-green-600 px-6 py-2 rounded-lg text-white hover:bg-green-700"
+                className="bg-green-600 px-7 py-2 rounded-lg text-white hover:bg-green-700"
               >
                 Join Waitlist
               </button>
